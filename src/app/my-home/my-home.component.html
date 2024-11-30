@@ -1,0 +1,14 @@
+<button (click)="navigate()">Move to New Component</button>
+
+<p>my-new works!</p>
+
+
+<p>Books: {{ store.root() | json }}</p>
+    <p>Loading: {{ store.isLoading() }}</p>
+
+    <!-- 👇 The `DeepSignal` value can be read in the same way as `Signal`. -->
+    <p>Pagination: {{ store.filter() | json }}</p>
+
+    <!-- 👇 Nested signals are created as `DeepSignal` properties. -->
+    <p>Query: {{ store.filter.query() }}</p>
+    <p>Order: {{ store.filter.order() }}</p>
